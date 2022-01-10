@@ -7,7 +7,7 @@ import * as dat from 'lil-gui'
  * Base
  */
 // Debug
-const gui = new dat.GUI({ width: 360})
+const gui = new dat.GUI({ width: 250, autoPlace: true})
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
