@@ -22,7 +22,7 @@ const parameters = {
     radius: 5,
     branches: 3,
     spin: 1.6,
-    randomness: 0.2,
+    randomness: 0.5,
     randomnessPower: 3,
     insideColor: "#ff6030",
     outsideColor: "#1b3984"
@@ -57,9 +57,9 @@ const generateGalaxy = () => {
         const spinAngle = radius * parameters.spin
         const branchAngles = (i % parameters.branches) / parameters.branches * Math.PI * 2;
 
-        const randomX = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1)
-        const randomY = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1)
-        const randomZ = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1)
+        const randomX = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1) * parameters.randomness
+        const randomY = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1) * parameters.randomness
+        const randomZ = Math.pow(Math.random(), parameters.randomnessPower) * (Math.random() < 0.5 ? 1 : -1) * parameters.randomness
 
         positions[i3] = Math.cos(branchAngles + spinAngle) * radius + randomX;
         positions[i3 + 1] = randomY;
