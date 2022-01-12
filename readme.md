@@ -1,4 +1,4 @@
-# Three.js Journey
+Link on Netlify: https://sunr1sen-galaxy-generator.netlify.app/
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
